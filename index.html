@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <div id="main-body">
+      <div id="sidebar">
+        <div id="sidebar-header">
+          <img  id="edit-icon"src="edit.png">
+          <img id="search-icon"src="magnifying-glass.png">
+          <img id="close-button" src="sidebar.png">
+        </div>
+        <div id="sidebar-subheader">
+          <div id="chaiGPTs">
+            <div class="chaiGPT"><img id="chaiGPT-icon" src="coffee.png">ChaiGPT</div>
+            <div class="chaiGPT"><img id="chaiGPT-options" src="options.png">Explore CHAIs</div>
+          </div>
+        </div>
+        <div id="sidebar-history">
+          No Chai history<br><span id="history">Start a chat with ChaiGPT</span>
+          <div id="sidebar-upgrade">
+            <div id="upgrade-icon"><img id="diamond" src="diamond.png"></div>
+            <div id="asshole">
+              <div id="asshole-title">ChaiGPT Premium<br><span id="asshole-else">Subscribe or watch two ads</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="convopage">
+        <div id="header">
+          <div id="model-verison">ChaiGPT (Genuine Pure Tea) <span id="diddy">⮟</span></div>
+          <div id="profile-container" onclick="profiledrop()">
+            <div id="profile">Zhiliang<img id="pfp" src="flybooty69.jpg"></div>
+          <div id="settings-dropdown">
+            <div id="account" class="settings">Account</div>
+            <div id="upgrade-setting" class="settings">Premium</div>
+            <div id="preferences" class="settings">Settings</div>
+            <div id="logout" class="settings">Logout</div>
+          </div>
+          </div>
+          
+          
+        </div>
+        <div id="convo-body">
+          <div id="conversation" class="started">
+            Genuine Pure Tea. Ask Anything
+            
+          </div>
+          <div id="input">
+            <div id="input-container"><input  id="input-box"placeholder="Ask anything" ></div>
+            <div id="input-options">
+              <div class="input-options"><div class="cont cont1"><img id="plusimg" src="more.png"></div></div>
+              <div class="input-options"><div class="cont cont2"><img id="www" src="www.png"></div></div>
+              <div class="input-options"><div class="cont cont3"><img id="idea" src="idea.png"></div></div>
+              <div class="input-options"><div class="cont cont4"><img id="calc" src="calculator.png"></div></div>
+              <div class="input-options"><img id="send" src="send.png" onclick="startConvo()"></div>
+            </div>
+          </div>
+          
+        </div>
+        <div id="warning">Do not soley rely on ChaiGPT. Check important info</div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
