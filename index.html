@@ -12,12 +12,13 @@
         <div id="sidebar-header">
           <img  id="edit-icon"src="edit.png">
           <img id="search-icon"src="magnifying-glass.png">
-          <img id="close-sidebar" src="sidebar.png">
+          <img id="close-sidebar" src="sidebar.png" onclick="closeSideBar()">
         </div>
         <div id="sidebar-subheader">
           <div id="chaiGPTs">
             <div class="chaiGPT" onclick="window.open('index.html','_self')"><img id="chaiGPT-icon" src="coffee.png">ChaiGPT</div>
             <div class="chaiGPT"><img id="chaiGPT-options" src="options.png">Explore CHAIs</div>
+            <div class="chaiGPT" onclick="resetTheme()"><img id="chaiGPT-options" src="settings.png">Reset Theme</div>
           </div>
         </div>
         <div id="sidebar-history">
@@ -195,7 +196,7 @@
       </div>
       <div id="overlay"></div>
       <div id="prefrence-popup" >
-        <div id="prefrence-header"><div>Settings</div><div onclick="closeSettings()">X</div></div>
+        <div id="prefrence-header"><div>Settings</div><div onclick="closeSettings()" style="cursor: pointer;">X</div></div>
         <div id="prefrence-body">
           <div id="p1" class="ps">
             <div>Theme</div>
@@ -208,7 +209,7 @@
           </div>
           <div id="p2" class="ps"><div>Language</div><div>English</div></div>
           <div id="p3" class="ps"><div>Delete all chats</div><div><button id="delete">Delete</button></div></div>
-          <div id="p4" class="ps"><div>Archive all chats</div><div><button>Archive</button></div></div>
+          <div id="p4" class="ps"><div>Archive all chats</div><div><button id="archive">Archive</button></div></div>
           <div id="p5" class="ps"><div>Show follow-up suggestions</div><div>On</div></div>
         </div>
       </div>
