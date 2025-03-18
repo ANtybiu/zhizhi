@@ -71,7 +71,28 @@ function startConvo(){
   document.getElementById('conversation').innerHTML = `
             <div class="row" id="row${rowID}" style="flex: 0 0 auto">
               <div id="user-message">${inputValue} <img id="pfp" src="flybooty69.jpg"></div>
-              <div id="response"><img id="chaiGPT-icon" src="coffee.png">The servers are down, please try again later.</div>
+              <div id="response"><svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 64.000000 64.000000"
+ preserveAspectRatio="xMidYMid meet" id="chaiGPT-icon" class="chaiGPT-icons">
+
+<g transform="translate(0.000000,64.000000) scale(0.100000,-0.100000)"
+fill="#000000" stroke="none">
+<path d="M182 565 c-16 -36 -15 -66 4 -93 26 -38 39 -21 40 51 1 56 -2 67 -16
+67 -9 0 -22 -11 -28 -25z"/>
+<path d="M250 561 c-14 -34 -6 -84 16 -102 22 -18 29 -3 31 67 1 55 -1 64 -17
+64 -10 0 -23 -12 -30 -29z"/>
+<path d="M332 577 c-6 -6 -13 -24 -17 -38 -12 -49 42 -118 58 -76 3 8 1 20 -4
+28 -5 8 -6 33 -3 57 5 33 3 42 -9 42 -8 0 -19 -6 -25 -13z"/>
+<path d="M82 421 c-11 -6 -13 -36 -10 -131 3 -119 4 -122 31 -146 27 -23 35
+-24 169 -24 l140 0 35 35 c19 19 44 35 54 35 11 0 31 11 44 25 52 51 23 185
+-40 185 -12 0 -28 7 -35 15 -10 12 -45 15 -194 15 -99 0 -187 -4 -194 -9z
+m348 -127 c0 -128 4 -124 -153 -124 -90 0 -137 4 -145 12 -8 8 -12 46 -12 105
+l0 93 155 0 155 0 0 -86z m78 57 c9 -5 12 -25 10 -57 -3 -42 -6 -49 -25 -52
+-21 -3 -23 0 -23 51 0 65 8 77 38 58z"/>
+<path d="M122 73 c3 -16 18 -18 153 -18 127 0 150 2 150 15 0 13 -25 15 -153
+18 -143 2 -153 1 -150 -15z"/>
+</g>
+</svg>The servers are down, please try again later.</div>
             </div>`;
   document.getElementById('input-box').value = '';
   document.getElementById('conversation').classList.add('convovo')
@@ -83,7 +104,28 @@ function startConvo(){
     document.getElementById('conversation').innerHTML += `
             <div class="row" id="row${rowID}"  style="flex: 0 0 auto">
               <div id="user-message">${inputValue} <img id="pfp" src="flybooty69.jpg"></div>
-              <div id="response"><img id="chaiGPT-icon" src="coffee.png">The servers are down, please try again later.</div>
+              <div id="response"><svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+ viewBox="0 0 64.000000 64.000000"
+ preserveAspectRatio="xMidYMid meet" id="chaiGPT-icon" class="chaiGPT-icons">
+
+<g transform="translate(0.000000,64.000000) scale(0.100000,-0.100000)"
+fill="#000000" stroke="none">
+<path d="M182 565 c-16 -36 -15 -66 4 -93 26 -38 39 -21 40 51 1 56 -2 67 -16
+67 -9 0 -22 -11 -28 -25z"/>
+<path d="M250 561 c-14 -34 -6 -84 16 -102 22 -18 29 -3 31 67 1 55 -1 64 -17
+64 -10 0 -23 -12 -30 -29z"/>
+<path d="M332 577 c-6 -6 -13 -24 -17 -38 -12 -49 42 -118 58 -76 3 8 1 20 -4
+28 -5 8 -6 33 -3 57 5 33 3 42 -9 42 -8 0 -19 -6 -25 -13z"/>
+<path d="M82 421 c-11 -6 -13 -36 -10 -131 3 -119 4 -122 31 -146 27 -23 35
+-24 169 -24 l140 0 35 35 c19 19 44 35 54 35 11 0 31 11 44 25 52 51 23 185
+-40 185 -12 0 -28 7 -35 15 -10 12 -45 15 -194 15 -99 0 -187 -4 -194 -9z
+m348 -127 c0 -128 4 -124 -153 -124 -90 0 -137 4 -145 12 -8 8 -12 46 -12 105
+l0 93 155 0 155 0 0 -86z m78 57 c9 -5 12 -25 10 -57 -3 -42 -6 -49 -25 -52
+-21 -3 -23 0 -23 51 0 65 8 77 38 58z"/>
+<path d="M122 73 c3 -16 18 -18 153 -18 127 0 150 2 150 15 0 13 -25 15 -153
+18 -143 2 -153 1 -150 -15z"/>
+</g>
+</svg>The servers are down, please try again later.</div>
             </div>`;
   document.getElementById('input-box').value = '';
   rowID ++;
@@ -187,26 +229,40 @@ function closeSettings(){
   document.getElementById('prefrence-popup').style.display = 'none'
 }
 
-function color(){
+function color(reset){
+  let r,g,b;
+  if(!reset){
   let color = document.getElementById('color-input').value;
     color = color.replace(/^#/, ''); // Remove #
     let bigint = parseInt(color, 16);
-    let r = (bigint >> 16) & 255;
-    let g = (bigint >> 8) & 255;
-    let b = bigint & 255;
+     r = (bigint >> 16) & 255;
+     g = (bigint >> 8) & 255;
+     b = bigint & 255;
+  }else{
+    r=255;
+    g=255;
+    b=255;
+  }
 
   document.body.style.backgroundColor = `rgb(${r},${g},${b})`;
   document.getElementById('input-box').style.backgroundColor = `rgb(${r},${g},${b})`
   document.getElementById('profile-container').style.backgroundColor = `rgb(${r},${g},${b})`
   
 }
-function textColor(){
+function textColor(reset){
+  let r,g,b;
+  if(!reset){
   let color = document.getElementById('color-input2').value;
     color = color.replace(/^#/, ''); // Remove #
     let bigint = parseInt(color, 16);
-    let r = (bigint >> 16) & 255;
-    let g = (bigint >> 8) & 255;
-    let b = bigint & 255;
+     r = (bigint >> 16) & 255;
+     g = (bigint >> 8) & 255;
+     b = bigint & 255;
+  }else{
+    r=0;
+    g=0;
+    b=0;
+  }
 
 
     document.getElementById('profile-container').style.boxShadow = `0 0 5px rgba(${r},${g},${b},0.5)`
@@ -279,8 +335,57 @@ function textColor(){
         path.setAttribute("fill", `rgb(${r},${g},${b})`); // Change the fill color to red
     });
   }
+  
+  if(document.querySelector('.chaiGPT-icons')){
+    let svgElement10 = document.querySelectorAll(".chaiGPT-icons"); // Select the SVG
+    svgElement10.forEach(element =>{
+      element.style.border = `1rem solid rgb(${r},${g},${b})`;
+  let paths10 = element.querySelectorAll("path"); // Select all <path> elements
+    
+    paths10.forEach(path => {
+        path.setAttribute("fill", `rgb(${r},${g},${b})`); // Change the fill color to red
+    });
+    })
+  
+  }
 }
 setInterval(()=>{
   color();
   textColor();
 },50)
+
+
+let sidebarOpen = false;
+function closeSideBar(){
+  sidebarOpen = ! sidebarOpen
+  if(sidebarOpen){
+  document.getElementById('sidebar').style.display = `none`;
+  document.body.style.paddingLeft = '0';
+  document.getElementById('convopage').style.width = `100vw`;
+  document.getElementById('header').style.width = `90%`
+  document.getElementById('header').style.left = `70rem`
+  document.getElementById('convopage').innerHTML += `<img id="close-sidebar2"src="sidebar.png" onclick="closeSideBar()">`
+  document.getElementById('close-sidebar2').style.position = 'fixed';
+  document.getElementById('close-sidebar2').style.top = '16rem';
+  document.getElementById('close-sidebar2').style.left = `30rem`;
+  document.getElementById('convo-body').style.width = `100%`;
+  document.getElementById('model-verison').style.marginTop = `5rem`;
+  document.getElementById('warning').style.left = `39.5%`;
+  }else{
+    document.getElementById('sidebar').removeAttribute('style')
+  document.body.style.paddingLeft = '20vw';
+  document.getElementById('convopage')
+  document.getElementById('header').removeAttribute('style')
+  document.getElementById('convopage').removeChild(document.getElementById('close-sidebar2')) 
+  document.getElementById('convo-body').removeAttribute('style')
+  document.getElementById('model-verison').removeAttribute('style')
+  document.getElementById('warning').style.left = `47%`
+  }
+}
+function resetTheme(){
+  console.log('reset')
+  document.getElementById('color-input').value = `#FFFFFF`;
+  document.getElementById('color-input2').value = `#000000`;
+  textColor('reset');
+  color('reset')
+}
