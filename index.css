@@ -35,12 +35,17 @@ body{
   left: 115.5rem;
   width: 17rem;
 }
-#close-sidebar{
+#close-sidebar,#close-sidebar2{
   width: 25rem;
   position: relative;
   top: 9rem;
   left: -25rem;
   cursor: pointer;
+}
+#close-sidebar2{
+  padding: 1rem;
+  background-color: white;
+  border-radius: 10rem;
 }
 #sidebar-header{
   height: 70rem;
@@ -406,7 +411,7 @@ input:focus {
   width: 0%;
   height: 1.25rem;
   transition: width 0.5s;
-  background-color: black;
+  background-color: currentColor;
   border-radius: 10rem;
 }
 .settings:hover::after{
@@ -474,7 +479,7 @@ input:focus {
   width: 75vw !important;
   overflow-y: auto;
   align-items: start !important;
-  border-top: 0.000001rem solid rgb(196, 196, 196);
+  border-top: 0.000001rem solid currentColor;
   padding-top:20rem;
 }
 #dy{
@@ -612,4 +617,23 @@ input:focus {
   left: 57%;
   width: 50rem;
   text-align: center;
+}
+#delete,#archive{
+  margin-top: 2rem;
+  padding-top: 7.5rem;
+  padding-bottom: 7.5rem;
+  padding-left: 10rem;
+  padding-right: 10rem;
+  border:none;
+  background-color: rgb(255, 32, 32);
+  color: white;
+  border-radius: 7rem;
+  font-family: Outfit;
+  cursor: pointer;
+}
+#delete:hover{
+  opacity:0.8
+}
+#archive:hover{
+  opacity:0.8;
 }
