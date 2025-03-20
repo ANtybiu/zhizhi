@@ -389,3 +389,12 @@ function resetTheme(){
   textColor('reset');
   color('reset')
 }
+
+function openAD(){
+  document.getElementById('overlay').style.display = 'block';
+  document.querySelector('.hehe').style.display = 'flex';
+}
+function closeAD(){
+  document.getElementById('overlay').style.display = 'none';
+  document.querySelector('.hehe').style.display = 'none';
+}
