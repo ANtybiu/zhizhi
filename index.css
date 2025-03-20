@@ -637,3 +637,22 @@ input:focus {
 #archive:hover{
   opacity:0.8;
 }
+.hehe{
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  font-family: Outfit;
+  font-size: 10rem;
+  position: fixed;
+  left: 43%;
+  top: 20%;
+  z-index: 1837098170983740917348170293870419732410298304198370498127309847103298491827390418710934;
+  background-color: white;
+  padding: 5rem;
+  border-radius: 10rem;
+  cursor: pointer;
+}
+#ad{
+  
+  width: 20vw;
+}
